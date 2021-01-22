@@ -47,3 +47,8 @@ output "security_group_name" {
   description = "Name of the DocumentDB cluster Security Group"
   value       = join("", aws_security_group.default.*.name)
 }
+
+output "ca_cert_identifier" {
+  description = "The identifier of the CA certificate for the DB instance."
+  value       = aws_docdb_cluster_instance.default.ca_cert_identifier
+}
