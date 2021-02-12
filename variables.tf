@@ -163,3 +163,10 @@ variable "ca_cert_identifier" {
   description = "The identifier of the CA certificate for the DB instance."
   default     = ""
 }
+
+variable "deletion_protection" {
+  type        = bool
+  description = "(Optional) A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled."
+  default     = false
+
+}

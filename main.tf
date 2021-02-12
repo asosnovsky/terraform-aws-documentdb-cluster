@@ -60,6 +60,7 @@ resource "aws_docdb_cluster" "default" {
   engine                          = var.engine
   engine_version                  = var.engine_version
   enabled_cloudwatch_logs_exports = var.enabled_cloudwatch_logs_exports
+  deletion_protection             = var.deletion_protection
   tags                            = module.this.tags
 }
 
